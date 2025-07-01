@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products - GreenBasket Grocery Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #e1f5d9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #2e7d32;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #4caf50;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .product {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product:hover {
+      transform: scale(1.02);
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 160px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin: 6px 0;
+    }
+
+    .product h3 {
+      margin: 8px 0 4px;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    .price {
+      color: #4CAF50;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #e1f5d9;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">GreenBasket</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="fruits.html">Fruits</a></li>
+              <li><a class="dropdown-item" href="vegetables.html">Vegetables</a></li>
+              <li><a class="dropdown-item" href="others.html">Others</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <a href="cart.html" class="btn position-relative">
+          <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            2
+            <span class="visually-hidden">items in cart</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <hr>
+
+  <!-- HEADER -->
+  <header>
+    <h1>GreenBasket Grocery Store</h1>
+    <p>Freshness Delivered Daily</p>
+  </header>
+
+  <!-- PRODUCTS -->
+  <div class="container">
+    <div class="product-list">
+      <div class="product"><h3>Apples (1kg)</h3><img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?fm=jpg&q=60&w=3000" alt="Apples"><p class="price">₹248</p></div>
+      <div class="product"><h3>Bananas (1kg)</h3><img src="https://thumbs.dreamstime.com/b/bunch-bananas-6175887.jpg" alt="Bananas"><p class="price">₹124</p></div>
+      <div class="product"><h3>Milk (1L)</h3><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTDEFhRQG7KjUiq0DdsmiJ_NmJcR68yEUWIh61uUbVFVbU0x_YCMhuMZ-J9L-2Bmr-N2DQaAJQTD8rgUNDbPiFooRkpI71tdPD9KGRXoluURIqrgLX4n6Nx" alt="Milk"><p class="price">₹82</p></div>
+      <div class="product"><h3>Bread (Loaf)</h3><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUVwTYugrmMQjVmkthMS8qlu37_gyv5GbSwbkHwMqikgESP_W-zh52uPoHeAsJVFU4EJ5w8wDj4hP56Ud8gku1-1sFGxrYe1QA3tHCXhlfz2jLar4GY6ObpA" alt="Bread"><p class="price">₹145</p></div>
+      <div class="product"><h3>Eggs (12-pack)</h3><img src="https://m.media-amazon.com/images/I/61AhcvBggmL._UF1000,1000_QL80_.jpg" alt="Eggs"><p class="price">₹208</p></div>
+      <div class="product"><h3>Carrots (1kg)</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTba3FfUO6CI9cySnHdGt1roZY60bdUInxLXQ&s" alt="Carrots"><p class="price">₹100</p></div>
+      <div class="product"><h3>Tomatoes (1kg)</h3><img src="https://doorkisan.com/wp-content/uploads/2016/05/upload_1e46ebbf78004709973c6b679673f94c.jpg" alt="Tomatoes"><p class="price">₹175</p></div>
+      <div class="product"><h3>Rice (5kg)</h3><img src="https://m.media-amazon.com/images/I/61XFtNhIx+L._UF894,1000_QL80_.jpg" alt="Rice"><p class="price">₹564</p></div>
+      <div class="product"><h3>Potatoes (1kg)</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4i7D3lMun5dzycLee32w71u3OU1Dt_1N4hA&s" alt="Potatoes"><p class="price">₹108</p></div>
+      <div class="product"><h3>Orange Juice (1L)</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvlJOm1-_F3NRHHwefQwdGcnBGev8kdz973A&s" alt="Orange Juice"><p class="price">₹183</p></div>
+      <div class="product"><h3>Green Tea (100 bags)</h3><img src="https://m.media-amazon.com/images/I/513+5oUaWCL.jpg" alt="Green Tea"><p class="price">₹374</p></div>
+      <div class="product"><h3>Onions (1kg)</h3><img src="https://m.media-amazon.com/images/I/51DJ-9xkuQL.jpg" alt="Onions"><p class="price">₹91</p></div>
+      <div class="product"><h3>Cheese (500g)</h3><img src="https://m.media-amazon.com/images/I/71a5gO3y44L.jpg" alt="Cheese"><p class="price">₹282</p></div>
+      <div class="product"><h3>Cooking Oil (1L)</h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14XNC3p7wzmjdYApBUC2poglX9S-YZDkeGA&s" alt="Cooking Oil"><p class="price">₹241</p></div>
+      <div class="product"><h3>Cereal (500g)</h3><img src="https://m.media-amazon.com/images/I/71ECwJ72HrL._UF1000,1000_QL80_.jpg" alt="Cereal"><p class="price">₹266</p></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 GreenBasket Grocery Store</p>
+  </footer>
+
+</body>
+</html>
